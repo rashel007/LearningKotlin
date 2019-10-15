@@ -19,7 +19,7 @@ Kotlin has been Google's preferred language for Android app development since 20
 #### Variables
 
 
-In Kotlin variables are declared with var or val. var is mutable , that means we can chnage the value any time. And val is immutable
+In Kotlin variables are declared with var or val. var is mutable , that means we can change the value any time. And val is immutable
 , means we cannot not change the declared value. For Example
 
 
@@ -45,3 +45,70 @@ If we just want to declare a variable and letter asign a value, then we must hav
 var personName: String
 personName = "Person Name"
 ```
+
+##### Data Type
+
+1. Byte - 8 bit
+2. Short - 16 bit
+3. Int - 32 bit
+4. Long - 64 bit
+5. Float - 32 bit
+6. Double - 64 bit
+
+```kotlin
+val myByte: Byte = 10
+val mySHort: Short = 125
+val myLong: Long = 100L // L is used to specify long value
+val myDouble: Double = 100.50
+
+// we can also use underscore in numeric values
+val hundredThousand = 100_000 // this will print 100000
+val oneMillion = 1_000_000 // this will print 1000000 
+
+```
+
+##### Arrays
+
+In Kotlin we declare array like this
+
+```kotlin
+val myNumberArray = arrayOf(1,2,3,4)
+val myStringArray = arrayOf("Cat", "Dog", "Cow")
+```
+Also we can use intArrayOf(), doubleArrayOf(), charArrayOf(). 
+
+
+##### Type Conversions
+
+> Unlike Java, kotlin doesn't support implicit conversion from smaller type to longer type. For example Int cannot be assigned to Long or Double. 
+```kotlin
+var myInt = 100
+var myLong: Long = myInt // Compile Error
+```
+
+> However, Every number type contains helper funtions that can to used to explicitly convert one type to another
+
+
+* toByte()
+* toShort()
+* toInt()
+* toLong()
+* toFloat() 
+
+Example: 
+
+```kotlin
+var myInt = 100
+var myLong: Long = myInt.toLong() 
+var myString: String = myInt.toString()
+```
+######  [Implicit vs Explicit](https://www.quora.com/What-is-meant-by-implicit-and-explicit-in-programming)
+
+
+
+
+
+## References
+1. [Callicoder](https://www.callicoder.com/kotlin-variables-data-types/)
+2. [Coding In Flow](https://www.youtube.com/playlist?list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2)
+3. [Kotlinlang](https://kotlinlang.org/docs/reference/)
