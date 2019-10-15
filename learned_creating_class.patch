@@ -1,0 +1,23 @@
+Index: src/freecodecampkotlin/ClassFile.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/freecodecampkotlin/ClassFile.kt	(date 1570630749000)
++++ src/freecodecampkotlin/ClassFile.kt	(date 1570630749000)
+@@ -0,0 +1,14 @@
++package freecodecampkotlin
++
++fun main() {
++
++
++    var myClass = FirstClass()
++//    myClass.firstName
++////    myClass.lastName
++////    myClass.nickName = "GabberSing"
++////    myClass.nickName = "new NickName"
++////    println(myClass.nickName)
++
++    myClass.printInfo()
++}
+\ No newline at end of file
