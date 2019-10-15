@@ -1,19 +1,14 @@
-# Design Patterns In Kotlin
+# Learning Kotlin 
+
+## Key Points in step by step 
 
 
-## Creational Design Pattern
-    1. Factory Pattern
-    2. Abstract Factory Pattern
-    3. Singleton Pattern
-    4. Prototype Pattern
-    5. Builder Pattern
-    
-    
-#### 1. Factory Design Pattern
 
-> It's a creational design pattern that provides an interface which encapsulate object creation, and lets the subclasses decide what
-objects to create. 
+#### 1. What is Kotlin
 
-```
-    Factory Design Pattern helps us maintain Single Responsibilioty Principle and Open Close Principle
-```
+> Kotlin is a cross-platform, [statically typed](https://www.youtube.com/watch?v=8aWvIwtnK4Q) general-purpose programming language with type interface.
+Kotlin is designed to interoperate fully with Java, and the JVM version of its standard library depends on the Java Class Library, but [type interface](https://medium.com/jay-tillu/type-inference-in-kotlin-how-things-exactly-works-behind-the-scenes-8d20730876a0) allows its syntax to be more concise. Kotlin Mainly targets the JVM , but also compiles to JavaScript
+or native code (via LLVM).
+
+> Kotlin is sponsored by JetBrains and Google through the kotlin foundation. Kotlin is officially supported by google for mobile development on Android. Since the release fo Android Studio 3.0 in 2017, Kotlin is included as an alternative to the standard Java compiler.
+Kotlin has been Google's preferred language for Android app development since 2019.   
