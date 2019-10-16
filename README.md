@@ -106,6 +106,110 @@ var myString: String = myInt.toString()
 
 
 
+##### Control Flow
+
+###### IF Statement
+```kotlin
+var n = 34
+if(n % 2 == 0){
+    println("$n is even")
+}
+
+// this curly braces if optional if if statement contains a single line
+if(n % 2 == 0) println("$n is even")
+
+```
+
+###### If as an Expression
+
+In kotlin we ca use as an expression instead of statement. For Example
+
+```kotlin
+val a = 32
+val b = 53
+
+val max = if (a > b) a else b
+
+// also we can use if else block bodies
+
+val max2 = if (a > b) {
+    println("$a is greater then $b")
+    a
+}else {
+    println("$b is greater then $a")
+    b
+}
+
+```
+
+We have to use else when we are using if as an expression .
+
+In Java we are familiar with switch statement. In kotlin switch statement is known as when statement.
+For Example
+
+```kotlin
+val value = 20
+
+when(value) {
+    20 -> println("value is 20")
+    else -> println("value is not 20")
+}
+
+// another example
+
+var dayOfweek = 6
+
+when(dayOfweek){
+     2, 3, 4, 5, 6 -> println("Working day")
+     6, 1 -> println("Week Day")
+     else -> println("Invalid Day")
+}
+
+```
+// range operation
+
+```kotlin
+var rangeValue = 5
+
+when(rangeValue) {
+   in 1..7 -> printLn("Got number in range")
+   !in 15..20 -> println("Number not in 15 and 20")
+   else -> println("None of the above")
+}
+
+```
+
+
+Checking weather a variable is certain type
+
+```kotlin
+    var x : Any = 6.45
+    
+    when(x) {
+        is Int -> println("$x is integer")
+        is String -> println("$x is String")
+        !is Double -> println("$x is not Double")
+        else -> println("None Of the above")
+    }
+```
+
+
+when as if , else-if example
+
+```kotlin
+var number = 20
+when{
+      number < 0 -> println("Number is Less then 0")
+      number % 2 == 0 -> println("Number is Even")
+      number < 50 -> println("Number is less then 50")
+    }
+
+```
+ 
+
+
+
+
 
 
 ## References
