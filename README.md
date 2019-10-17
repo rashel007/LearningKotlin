@@ -257,7 +257,64 @@ for(number in myArray){
  ```
 
 
+##### Nullable Type And Null Safety in kotlin
 
+> I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler.
+But I couldn’t resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.
+-Sir Tony Hoare, The inventor of null reference
+
+In Kotlin the compiler detect nullpointexception at compile time. All variables in kotlin are by default non-nullable. 
+So the below code will throw error ar compilation time
+
+```kotlin
+    var gretting: String = "Hello World"
+    gretting = null // compilation error
+    
+    // to allow null values we have to do it like this
+    
+    var gretting: String? = "Hello World"
+    gretting = null
+```
+Adding a null check
+
+```kotlin
+val nullableName: String? = "Rashel"
+
+if(nullableName != null){
+    
+}else {
+    
+}
+
+// also we can do this
+nullableName?.toUpperCase()
+
+// this is same as
+if(nullableName != null){
+    // print name
+}else
+    null
+    
+// So we will get null if variable is null
+
+``` 
+
+
+To perform an operation only if the value is not null , we can do like this
+
+```kotlin
+    var nullableName: String? = null
+    nullableName?.let {
+        //print name
+     }
+```
+
+Alos we want to declare default or other value if the variable is null, we can use Elvis operator ( ?: )
+
+```kotlin
+    var nullableName: String? = null
+    val name = nullableName ?: "Rashel" // this will assign default name Rashel
+```
 
 
 ## References
