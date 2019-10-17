@@ -205,14 +205,62 @@ when{
     }
 
 ```
- 
 
+while and do-while loop
+
+```kotlin
+    var x = 1
+    while (x <=5){
+        println("$x")
+        x++
+    }
+    
+    // do-while loop is similar as while except it test the condition at the end of the loop
+    do {
+        println("$x")
+        x++
+    }while (x <= 5)
+    
+```
+
+for loop
+
+```kotlin
+// Iterating through a range
+
+for(value in 1..10){
+    print("$value ")
+}
+
+
+// Iteration through an array
+
+val myArray = intArrayOf(2,3,4,5,6)
+
+for(number in myArray){
+    print("$number ")
+}
+
+```
+ > Every array in kotlin has a property called indices (indices is plural from index) which returns a range of valid indices of the array
+ . We can iterate over the indices of the array and retrieve each array element using its index
+ 
+ 
+ ```kotlin
+ 
+ var primeNumbers = intArrayOf(2, 3, 4, 7 ,11)
+ 
+ for(index in primeNumbers.indices) {
+    println("At ${index+1} value is : ${primeNumbers[index]}")
+ }
+ 
+ ```
 
 
 
 
 
 ## References
-1. [Callicoder](https://www.callicoder.com/kotlin-variables-data-types/)
+1. [Callicoder](https://www.callicoder.com/categories/kotlin/)
 2. [Coding In Flow](https://www.youtube.com/playlist?list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2)
 3. [Kotlinlang](https://kotlinlang.org/docs/reference/)
