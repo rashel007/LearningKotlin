@@ -19,7 +19,20 @@ fun main() {
 //    println(varargsExample(*myArrayL))
 
 
-    println(myNestedFuntionExample(4, 7))
+//    println(myNestedFuntionExample(4, 7))
+
+    // extention function
+    val myHero = Hero()
+    myHero setPower "Jump High"
+    print(myHero.getPower())
+}
+
+infix fun Hero.setPower(p: String){
+    power = p
+}
+
+fun Hero.getPower():String {
+    return power
 }
 
 fun funwithDefaultArg(val1: Int = 40, val2: Int) {

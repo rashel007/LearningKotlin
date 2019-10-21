@@ -367,6 +367,58 @@ In koltin we can have nested function . Nested function can use top lavel functi
     
 ```
 
+##### infix function in kotlin
+
+Before learning infix function we should know extention function . An extion function is a member funtion of a class that is defined outside of a class
+Althrough it is a member funtion , it cannot access the private members. For example
+
+```kotlin
+    // lets first create a calss
+    class Hero {
+        var power: String = ""
+    }
+    
+    
+    // now from our main function we can add extention function like this
+    
+    fun main() {
+        val myHero = Helo()
+        myHero.setPower("Jump Hight")
+        myHero.showPower()
+        
+    }
+    
+    fun Hero.setPower(p: String){
+        power = p
+    }
+    
+    fun Hero.showPower() {
+        println(power)
+    }
+```
+
+
+infix funtion imporves readability of code. To Create an infix funtion the function should be
+
+1. A member function or an extention function only. So it should be part of a class
+2. It can take only one parameter. It cannot take 0 parameter. 
+
+SO the syntex for infix function is
+
+#### object functionname parameter
+
+So we can chnage the extention function of our hero class like this. 
+
+```kotlin
+infix fun Hero.setPower(p : String){
+    power = p
+}
+
+// and call from main function like this
+
+myHero setPower "New Power"
+ 
+ ```
 
 ## References
 1. [Callicoder](https://www.callicoder.com/categories/kotlin/)
