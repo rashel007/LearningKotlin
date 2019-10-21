@@ -420,6 +420,42 @@ myHero setPower "New Power"
  
  ```
 
+
+
+##### Class and Constructor 
+
+In Kotlin every secondary constructor must call the primary constructor,  either directly or indirectly via another 
+secondary constructor
+
+```kotlin
+
+class MyFirstClass(var firstName: String, var lastName: String) {
+
+    var age: Int? = null
+
+    var phoneNumber: String? = null
+
+
+    constructor(firstName: String, lastName: String, age: Int) : this(firstName, lastName) {
+        this.age = if (age > 0) age else throw IllegalArgumentException("Age must be greater then 0")
+    }
+
+    constructor(firstName: String, lastName: String, age: Int, phoneNumber: String) : this(firstName, lastName, age) {
+        this.phoneNumber =
+            if (phoneNumber != null) phoneNumber else throw IllegalArgumentException("Provide Phone NUmber")
+    }
+}
+
+
+fun main() {
+    var myClass = MyFirstClass("EA", "Rashel")
+    var myClass2 = MyFirstClass("EA", "Rashel", 20)
+    var myClass3 = MyFirstClass("EA", "Rashel", 20, "0179900...")
+}
+
+```
+
+
 ## References
 1. [Callicoder](https://www.callicoder.com/categories/kotlin/)
 2. [Coding In Flow](https://www.youtube.com/playlist?list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2)
