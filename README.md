@@ -317,6 +317,57 @@ Alos we want to declare default or other value if the variable is null, we can u
 ```
 
 
+##### Function
+
+using vararg in function parameter 
+
+```kotlin
+    fun myVarargExample(vararg values:Int ): Int {
+        var sum = 0
+        
+        for(value in values){
+            sum = sum + value
+        }
+        
+        return value
+    }
+    
+    // we can call this function like this
+    
+    myVarargExample(2,3,4,5) // this will return 14
+    
+    // but if we have a variable of type array then we have to pass it like this
+    var myArray = intArrayOf(2,3,4,5)
+    
+    myVarArgExample(*myArray) // this will print 14
+```
+
+In koltin we can have nested function . Nested function can use top lavel function variables
+
+```kotlin
+
+    fun myNestedFunctionExample( num1: Int,  num2: Int): Int{
+    
+        if(num1 <= 1){
+            throw IllegalArgumentException("Value 1 cant be less then or equal to 0")
+        }
+        
+        if(num2 <= 0){
+            throw IllegalArgumentException("Value 2 cant be less then or equal to 0")
+        }
+        
+        fun calculate() {
+            val agv: Int = (num1 + num2) /2
+            return avg
+        }
+        
+        return calculate()
+        
+    }
+    
+```
+
+
 ## References
 1. [Callicoder](https://www.callicoder.com/categories/kotlin/)
 2. [Coding In Flow](https://www.youtube.com/playlist?list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2)
