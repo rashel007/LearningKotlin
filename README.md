@@ -456,6 +456,11 @@ fun main() {
 ```
 
 
+#### For Inheritance we have to use open keyword in Base/Super class .
+
+
+
+
 ## References
 1. [Callicoder](https://www.callicoder.com/categories/kotlin/)
 2. [Coding In Flow](https://www.youtube.com/playlist?list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2)
