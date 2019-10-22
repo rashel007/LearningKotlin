@@ -459,6 +459,11 @@ fun main() {
 #### For Inheritance we have to use open keyword in Base/Super class .
 
 
+#### [Companion Object](https://medium.com/@agrawalsuneet/companion-object-in-kotlin-5251e03d6423)
+
+#### [lateinit & lazy](https://www.youtube.com/watch?v=yEX9_PeNRy4)
+
+
 
 
 ## References
